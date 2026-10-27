@@ -1,0 +1,22 @@
+{
+	"format": 1,
+	"id": "com.plusinsta.discordplus",
+	"name": "Discord+",
+	"description": "A sleek, customizable Discord theme. Port of Discord+ by PlusInsta for Valenced.",
+	"author": "PlusInsta (Valenced port)",
+	"version": "3.4.1",
+	"dependencies": {
+		"valenced.api": {
+			"version": ">=1 <2"
+		},
+		"discord": {
+			"version": "*"
+		},
+		"valenced.api.themes": {
+			"version": "*"
+		}
+	},
+	"dist": {
+		"script": "index.js"
+	}
+}
