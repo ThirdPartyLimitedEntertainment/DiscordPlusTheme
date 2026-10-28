@@ -25,6 +25,23 @@ root and `assets/` beside them — then add it to a Valenced plugin source / ins
 the Valenced manager. The committed `index.js` is the current prebuilt bundle, so no JS
 toolchain is needed just to install.
 
+## Legacy themes (Bunny / Vendetta family)
+
+[`legacy/DiscordPlus-Dark.json`](legacy/DiscordPlus-Dark.json) and
+[`legacy/DiscordPlus-Light.json`](legacy/DiscordPlus-Light.json) are the same Discord+
+palette in the legacy JSON theme format (`spec: 2`) used by Bunny/Vendetta-family clients:
+123 semantic colors per base, the re-hued `PRIMARY_*` surface ladder and the accent
+`BRAND_*`/`BLUE_*`/`BLURPLE_*` ramp in `rawColors`, Poppins wired into the `fonts` map
+(served from Google's font repo), and Material-style `sysColors` ramps around the accent.
+Status colors (green/red/yellow) keep Discord's defaults.
+
+Differences from the Valenced version: the legacy format has no background-image support,
+so the Moonlit Dusk / Dawn backdrops and their surface translucency are not included, and
+there is no font-pack choice — Poppins is baked in as the UI font for every family.
+
+The JSONs are generated — to regenerate after changing the palette, run
+`node legacy/generate.js` (no dependencies).
+
 ## How the desktop config maps to Valenced
 
 Discord+ on desktop is a CSS variable config layered over its source stylesheet. Valenced
